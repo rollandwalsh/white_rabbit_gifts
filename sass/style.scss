@@ -1,0 +1,878 @@
+@import url('../styles/boots-bones.css');
+/*
+Theme Name: WRG 2020 Wordpress
+Theme URI: http://rollandwalsh.com/
+Author: Rolland Walsh
+Author URI: http://rollandwalsh.com
+Description: A theme to showcase the awesome company: White Rabbit Gifts on the Wordpress platform.
+Version: 1.0
+License: GNU General Public License
+
+-------------------------------------------------------------- */
+
+@import 'settings';
+@import 'reset';
+
+/* --------------------
+	Typography
+-------------------- */
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Paragraphs */
+
+p {
+	margin-bottom: $padding;
+	
+	font-size: inherit;
+	line-height: $text-line-height;
+	text-rendering: optimizeLegibility;
+}
+
+em,
+i {
+	font-style: italic;
+	line-height: inherit;
+}
+
+strong,
+b {
+	font-weight: bold;
+	line-height: inherit;
+}
+
+small {
+	font-size: $font-size * .75;
+	line-height: inherit;
+}
+
+/* Headings */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $serif-font;
+	font-style: normal;
+	font-weight: 400;
+	color: $black;
+	line-height: $text-line-height;
+	text-rendering: optimizeLegibility;
+	
+	margin-bottom: $padding;
+	
+	small {
+		line-height: 0;
+		color: $dark-gray;
+	}
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+ 
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.5rem
+}
+
+h6 {
+	font-size: 1.2rem
+}
+
+hr {
+	clear: both;
+	
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid $black;
+    border-left: 0;
+	
+	height: 0;
+	margin: ($padding * 2) auto;
+	max-width: $content-width;
+}
+
+/* Links */
+
+a {
+	line-height: inherit;
+	color: $link-color;
+	
+	cursor: pointer;
+	
+	transition: $transition;
+	
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+	
+	img {
+		border: 0;
+	}
+}
+
+/* Lists */
+
+ul,
+ol,
+dl {
+	line-height: $text-line-height;
+	list-style-position: outside;
+	
+	margin: 0 0 $padding ($padding * 2);
+	
+	ul,
+	ol,
+	dl {
+		margin: 0 0 0 $padding;
+	}
+}
+
+li {
+	font-size: inherit;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $padding $padding;
+}
+
+/* Blockquotes */
+
+blockquote {
+	margin: 0 0 $padding;
+	padding: $padding ($padding * 2);
+	border-left: 1px solid $gray;
+	
+	&, p {
+		line-height: $text-line-height;
+		color: $dark-gray;
+	}
+}
+
+/* Abbreviations */
+
+abbr, abbr[title] {
+	border-bottom: 1px dashed $black;
+	cursor: help;
+	text-decoration: none;
+}
+
+/* Figures */
+
+figure {
+	margin: 0;
+}
+
+/* Keystrokes */
+
+kbd {
+	margin: 0;
+	padding: ($padding / 2) $padding 0;
+	
+	background-color: $light-gray;
+	
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	color: $black;
+}
+
+pre {
+	background: $light-gray;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 0.7em;
+	line-height: 1.5em;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+	box-shadow: 0 3px 5px $light-gray inset;
+}
+
+/* Text Align */
+
+@each $align in (left, right, center, justify) {
+	.text-#{$align} {
+		text-align: $align;
+	}
+}
+
+
+/* --------------------
+	Misc elements
+-------------------- */
+
+img {
+	border: none;
+	
+	margin: 0 0 $padding;
+	max-width: 100%;
+	vertical-align: middle;
+	
+	display: inline-block;
+}
+
+
+/* --------------------
+	Containers
+-------------------- */
+
+.site-container {
+	background: $white;
+	border: $border-thick;
+	border-radius: $border-radius;
+	font-size: 18px;
+	
+	margin: 0 auto;
+	max-width: $content-width;
+	width: 100%
+}
+
+
+/* --------------------
+	Header
+-------------------- */
+
+.site-header {
+	
+}
+
+.site-title-container {
+	width: 100%;
+	
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	
+	img {
+		margin: $padding;
+	}
+	
+	h1 {
+		font-size: 56px;
+		font-weight: 400;
+		line-height: 1;
+		
+		margin: 0;
+		padding: ($padding / 2) $padding;
+		
+		flex: 1 1 auto;
+		
+		a {
+			text-decoration: none;
+			
+			span {
+				display: block;
+				
+				&:first-of-type {
+					text-align: left;
+				}
+				
+				&:nth-of-type(2) {
+					text-align: center;
+				}
+				
+				&:last-of-type {
+					text-align: right;
+				}
+			}
+		}
+		
+		ul {
+			margin: 0;
+			padding: $padding;
+			
+			list-style: none;
+			
+			display: flex;
+			
+			a {
+				padding: $padding;
+			}
+		}
+	}
+	
+	h4 {
+		color: $gray;
+		font-family: $main-font;
+		font-size: 32px;
+		font-weight: 100;
+		line-height: 1;
+		text-align: center;
+		
+		padding: $padding;
+		width: 100%;
+	}
+}
+			
+.site-title {
+	
+}
+
+.site-navigation {
+	.mobile-toggle {
+		display: none;
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		
+		list-style: none;
+		
+		display: flex;
+		flex: 1 1 auto;
+		flex-wrap: wrap;
+	}
+		
+	li {
+		flex: 1 1 auto;
+		
+		&:nth-of-type(4n+1) {
+			a {
+				background: $blue;
+			}
+		}
+		
+		&:nth-of-type(4n+2) {
+			a {
+				background: $pink;
+			}
+		}
+		
+		&:nth-of-type(4n+3) {
+			a {
+				background: $green;
+			}
+		}
+		
+		&:nth-of-type(4n) {
+			a {
+				background: $purple;
+			}
+		}
+		
+		a:hover {
+			background: $link-hover-color;
+		}
+	}
+	
+	a {
+		color: $white;
+		font-size: 20px;
+		font-weight: 600;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		
+		padding: $padding $padding ($padding * 1.5);
+		
+		display: block;
+	}
+}
+
+
+/* --------------------
+	Post
+-------------------- */
+
+.site-content {
+	
+}
+
+.post-title {
+	background-image: $body-background-image;
+	background-color: $link-hover-color;
+	background-blend-mode: multiply;
+	
+	padding: $padding;
+	
+	h1 {
+		color: $white;
+		font-family: $serif-font-solid;
+		font-size: 3rem;
+		font-weight: 900;
+		text-align: center;
+		
+		a {
+			color: $white;
+		}
+		
+		hr {
+			border-color: $white;
+			
+			margin: $padding auto;
+			width: 35%;
+		}
+		
+		small {
+			color: $light-gray;
+			line-height: 1.5;
+			display: block;
+		}
+	}
+}
+
+.post-content {
+	padding: $padding $padding 0;
+	
+	.line {
+		border: none;
+		border-bottom: $border-thin;
+		
+		margin: 0 ($padding * -1) $padding;
+		padding: 0;
+		width: calc(100% + ($padding * 2));
+		
+		display: block;
+	}
+}
+
+.post-section {
+	display: flex;
+	justify-content: space-between;
+	
+	&.right header {
+		margin: ($padding * -1) ($padding * -2) 0 $padding;
+		
+		order: 1;
+	}
+		
+	&:not(.right) header {
+		margin: ($padding * -1) $padding 0 ($padding * -2);
+	}
+	
+	header {
+		background: $black;
+		
+		min-height: 14.5rem;
+		width: 6rem;
+		
+		h3 {
+			color: $white;
+			font-size: 2rem;
+			font-weight: 100;
+			line-height: 1;
+			white-space: nowrap;
+			
+			margin: 0;
+				
+			transform: rotate(-90deg) translateX(-8.5rem);
+		}
+	}
+	
+	section {
+		flex: 1 1 auto;
+	}
+}
+
+.post-tags {
+	border-top: $border-thin;
+	border-bottom: $border-thin;
+	
+	margin: 0;
+	padding: $padding;
+	list-style: none;
+	 
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	
+	li {
+		margin: $padding;
+		
+		&.heading {
+			font-weight: bold;
+			text-align: center;
+			
+			width: 100%;
+		}
+	}
+	
+	a {
+		background: $link-color;
+		border-radius: 24px;
+		color: $white;
+		text-decoration: none;
+		
+		padding: $padding ($padding * 3) ($padding * 1.5);
+		
+		display: block;
+		
+		&:hover {
+			background: $link-hover-color;
+			color: $white;
+		}
+	}
+}
+
+
+/* --------------------
+	Book Group Post
+-------------------- */
+
+.book-group.post {
+	.post-thumbnail {
+		background: $pink;
+		text-align: center;
+		
+		padding: 0 $padding ($padding * 4);
+		width: 100%;
+		
+		p {
+			color: $white;
+			font-size: 32px;
+			font-variant: small-caps;
+			font-weight: bold;
+			letter-spacing: 1px;
+			text-transform: lowercase;
+			
+			padding: $padding;
+		}
+		
+		img {
+			border: $border-thin;
+			
+			margin: 0 auto;
+			width: 240px;
+			
+			display: block;
+		}
+	}
+	
+	.post-meta {
+		h4 {
+			color: $purple;
+			font-family: $main-font;
+			text-align: center;
+		}
+	}
+}
+
+
+/* --------------------
+	Comments
+-------------------- */
+
+.comment-respond {
+	padding: $padding;
+	
+	button.submit {
+		
+	}
+}
+
+.comment-reply-title {
+	text-align: center;
+}
+
+
+/* --------------------
+	Sub Nav
+-------------------- */
+		
+.sub-nav {
+	border-top: $border-thin;
+	
+	margin: 0 ($padding * -1);
+	padding: 0;
+	width: calc(100% + 1rem);
+	
+	list-style: none;
+	
+	display: flex;
+	justify-content: center;
+}
+
+.sub-nav li {
+	display: flex;
+	flex: 1 1 25%; // for 4 buttons across
+}
+
+.sub-nav li:not(:last-of-type) {
+	border-right: $border-thin;
+}
+
+.sub-nav a {
+	background: $main-color;
+	color: $black;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	padding: $padding;
+	height: 3.5rem;
+	width: 100%;
+	
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.sub-nav a:hover {
+	background: $black;
+	color: $main-color;
+	font-size: 1.125rem;
+	font-weight: 900;
+}
+
+
+/* --------------------
+	Upcoming
+-------------------- */
+
+.upcoming-book-group,
+.upcoming-events {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	
+	article {
+		margin: 0 ($padding / 2) $padding;
+		width: 200px;
+		
+		a {
+			border: $border-thin;
+			border-color: $link-color; 
+			
+			padding: $padding;
+			
+			align-items: center;
+			display: flex;
+			flex-flow: column nowrap;
+			
+			&:hover {
+				border-color: $link-hover-color;
+			}
+			
+			img {
+				width: 100%
+			}
+		}
+	}
+}
+
+
+
+/* --------------------
+	Gift Card
+-------------------- */
+
+.gift-card {
+	border: $border-thin;
+	border-color: $green;
+	border-radius: 1rem;
+}
+
+
+/* --------------------
+	Footer
+-------------------- */
+
+.site-footer {
+	border-top: $border-thin;
+	font-size: .875rem;
+	text-align: center;
+	
+	padding: $padding;
+	height: 215px;
+	width: 100%;
+	
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	
+	p {
+		align-self: flex-end;
+	}
+	
+	h6 {
+		font-size: 4rem;
+		font-weight: 400;
+		color: $gray;
+		line-height: 1;
+		
+		margin: 0;
+		
+		align-self: flex-start;
+	}
+	
+	img {
+		align-self: flex-end;
+		flex: 1 1 auto;
+	}
+}
+
+
+
+/* ====================
+	#Media Queries
+==================== */
+
+/* Those wide screens above 1280px */
+@media only screen and (min-width: 1281px) {
+
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	h1 {
+		font-size: 2rem;
+	}
+	 
+	h2 {
+		font-size: 1.8rem;
+	}
+	
+	h3 {
+		font-size: 1.5rem;
+	}
+	
+	h4 {
+		font-size: 1.2rem;
+	}
+	
+	h5 {
+		font-size: 1rem
+	}
+	
+	h6 {
+		font-size: 1rem
+	}
+	
+	.site-title-container {
+		
+		h1 {
+			font-size: 42px;
+		}
+	
+		h4 {
+			font-size: 18px;
+			font-weight: 400;
+		}
+		
+		img {
+			display: none;
+		}
+	}
+	
+	.site-navigation {
+		.mobile-toggle {
+			background: $pink;
+			color: $white;
+			font-size: 24px;
+			font-weight: 900;
+			text-align: center;
+			text-transform: uppercase;
+			
+			padding: $padding;
+			width: 100%;
+			
+			cursor: pointer;
+			
+			transition: $transition;
+			
+			&:hover {
+				background: $yellow;
+			}
+			
+			display: block;
+		}
+		
+		li {
+			width: 100%;
+		}
+		
+		.menu-main-container {
+			display: none;
+		}
+	}
+	
+	.post-title {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+	
+	.site-footer {
+		height: auto;
+		
+		h6 {
+			font-size: 3rem;
+		}
+		
+		img {
+			display: none;
+		}
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+}

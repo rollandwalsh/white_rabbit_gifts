@@ -1,0 +1,20 @@
+{
+  "name": "wrg-2020-wp-theme",
+  "version": "1.0.0",
+  "description": "whiterabbit.gifts WordPress Theme 2020",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Rolland Walsh",
+  "license": "ISC",
+  "dependencies": {
+    "fibers": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.13.1",
+    "sass": "^1.25.0"
+  }
+}

@@ -42,7 +42,7 @@ td {
 /* Paragraphs */
 
 p {
-	margin-bottom: $padding;
+	margin-bottom: $padding * 2;
 	
 	font-size: inherit;
 	line-height: $text-line-height;

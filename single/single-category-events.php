@@ -33,7 +33,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 								}
 							?>
 							<p><?php echo $upcoming . ' ' . esc_html( get_the_category()[0]->name ); ?></p>
-							<?php the_post_thumbnail('large'); //Get the thumbnail to this post. ?>
+							<?php the_post_thumbnail('full'); //Get the thumbnail to this post. ?>
 						</aside>
 						
 						<div class="post-content">

@@ -1,0 +1,71 @@
+.woocommerce .products ul,
+.woocommerce ul.products {
+	margin: 0 ($padding * -1) $padding;
+	
+	display: flex;
+	flex-flow: row wrap;
+	
+	li,
+	li.product {
+		border: $border-link;
+		
+		float: none;
+		margin: $padding;
+		width: calc(50% - 1rem);
+		
+		align-self: flex-start;
+		
+		&:hover {
+			border-color: $link-hover-color;
+		}
+		
+		a:not(.button) {
+			display: flex;
+			flex-flow: row wrap;
+			
+			h2.woocommerce-loop-product__title {
+				font-family: $main-font;
+				
+				padding: $padding;
+				width: calc(100% - 180px);
+				
+				order: 0;
+			}
+			
+			img {
+				width: 180px;
+				
+				order: 1;
+			}
+			
+			span.price {
+				font-family: $main-font;
+				font-weight: 600;
+				
+				display: block;
+				padding: $padding;
+				width: 100%;
+				
+				order: 2;
+			}
+		}
+		
+		a.button {
+			background: $pink;
+			color: $white;
+			text-align: center;
+			text-transform: uppercase;
+			
+			margin: $padding;
+			
+			display: block;
+		}
+	}
+	
+	@media only screen and (max-width: 767px) {
+		li,
+		li.product {
+			width: calc(100% - 1rem);
+		}
+	}
+}

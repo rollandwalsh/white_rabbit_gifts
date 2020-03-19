@@ -32,9 +32,9 @@ do_action( 'woocommerce_before_main_content' );
 	<div id="primary">
 		<section id="content" role="main" class="site-content">
 			<article class="post">
-				<header class="woocommerce-products-header">
+				<header class="post-title woocommerce-products-header">
 					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-						<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+						<h1 class="title woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 					<?php endif; ?>
 				
 					<?php

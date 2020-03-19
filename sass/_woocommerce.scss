@@ -5,6 +5,10 @@
 	display: flex;
 	flex-flow: row wrap;
 	
+	&:before {
+		display: none !important;
+	}
+	
 	li,
 	li.product {
 		border: $border-link;
@@ -47,6 +51,7 @@
 				font-weight: 600;
 				
 				display: block;
+				margin-bottom: 0;
 				padding: $padding;
 				width: 100%;
 				
@@ -107,7 +112,7 @@
 		}
 		
 		a {
-			color: $white;
+			color: $white !important;
 			font-size: 16px;
 			font-weight: 400;
 			text-transform: none;

@@ -100,13 +100,14 @@
 	}
 	
 	li {
-		flex: 0 0 auto;
+		flex: 0 0 auto !important;
 		
 		&:last-of-type {
 			background: $white;
 		}
 		
 		a {
+			color: $white;
 			font-size: 16px;
 			font-weight: 400;
 			text-transform: none;

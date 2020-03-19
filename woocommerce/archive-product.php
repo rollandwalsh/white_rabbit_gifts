@@ -27,18 +27,18 @@ get_header( 'shop' ); ?>
 						<h1 class="title woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 					</header>
 				<?php endif; ?>
-			
-				<?php
-				/**
-				 * Hook: woocommerce_archive_description.
-				 *
-				 * @hooked woocommerce_taxonomy_archive_description - 10
-				 * @hooked woocommerce_product_archive_description - 10
-				 */
-				do_action( 'woocommerce_archive_description' );
-				?>
 				
 				<div class="post-content">
+					<?php
+					/**
+					 * Hook: woocommerce_archive_description.
+					 *
+					 * @hooked woocommerce_taxonomy_archive_description - 10
+					 * @hooked woocommerce_product_archive_description - 10
+					 */
+					do_action( 'woocommerce_archive_description' );
+					?>
+				
 					<?php
 					/**
 					 * Hook: woocommerce_before_main_content.

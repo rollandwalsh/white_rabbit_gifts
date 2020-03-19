@@ -73,8 +73,13 @@
 }
 
 .searchform {
-	display: flex;
+	width: 100%;
 	
+	>div {
+		width: 100%;
+		display: flex;
+	}
+		
 	#searchsubmit {
 		font-weight: 600;
 		text-transform: uppercase;

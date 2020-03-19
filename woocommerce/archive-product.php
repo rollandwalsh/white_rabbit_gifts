@@ -108,6 +108,7 @@ get_header( 'shop' ); ?>
 					 */
 					do_action( 'woocommerce_after_main_content' );
 					?>
+					<hr class="line">
 				</div>
 			</article>
 		</section>

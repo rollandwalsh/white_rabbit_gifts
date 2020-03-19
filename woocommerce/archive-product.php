@@ -22,21 +22,21 @@ get_header( 'shop' ); ?>
 	<div id="primary">
 		<section id="content" role="main" class="site-content">
 			<article class="post">
-				<header class="post-title woocommerce-products-header">
-					<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<header class="post-title woocommerce-products-header">
 						<h1 class="title woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-					<?php endif; ?>
-				
-					<?php
-					/**
-					 * Hook: woocommerce_archive_description.
-					 *
-					 * @hooked woocommerce_taxonomy_archive_description - 10
-					 * @hooked woocommerce_product_archive_description - 10
-					 */
-					do_action( 'woocommerce_archive_description' );
-					?>
-				</header>
+					</header>
+				<?php endif; ?>
+			
+				<?php
+				/**
+				 * Hook: woocommerce_archive_description.
+				 *
+				 * @hooked woocommerce_taxonomy_archive_description - 10
+				 * @hooked woocommerce_product_archive_description - 10
+				 */
+				do_action( 'woocommerce_archive_description' );
+				?>
 				
 				<div class="post-content">
 					<?php

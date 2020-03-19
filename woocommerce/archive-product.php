@@ -38,26 +38,25 @@ get_header( 'shop' ); ?>
 					?>
 				</header>
 				
-				<?php
-				/**
-				 * Hook: woocommerce_before_main_content.
-				 *
-				 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-				 * @hooked woocommerce_breadcrumb - 20
-				 * @hooked WC_Structured_Data::generate_website_data() - 30
-				 */
-				do_action( 'woocommerce_before_main_content' );	
-				?>
-				
-				<form role="search" method="get" id="searchform" class="searchform" action="https://whiterabbit.gifts/">
-					<div>
-						<label class="screen-reader-text" for="s">Search for:</label>
-						<input type="text" value="" name="s" id="s">
-						<input type="submit" id="searchsubmit" value="Search">
-					</div>
-				</form>
-				
 				<div class="post-content">
+					<?php
+					/**
+					 * Hook: woocommerce_before_main_content.
+					 *
+					 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+					 * @hooked woocommerce_breadcrumb - 20
+					 * @hooked WC_Structured_Data::generate_website_data() - 30
+					 */
+					do_action( 'woocommerce_before_main_content' );	
+					?>
+					
+					<form role="search" method="get" id="searchform" class="searchform" action="https://whiterabbit.gifts/">
+						<div>
+							<label class="screen-reader-text" for="s">Search for:</label>
+							<input type="text" value="" name="s" id="s">
+							<input type="submit" id="searchsubmit" value="Search">
+						</div>
+					</form>
 					<?php
 					if ( woocommerce_product_loop() ) {
 					

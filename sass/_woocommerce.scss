@@ -71,3 +71,14 @@
 		}
 	}
 }
+
+.searchform {
+	display: flex;
+	
+	#searchsubmit {
+		font-weight: 600;
+		text-transform: uppercase;
+		
+		padding: $padding ($padding * 3);
+	}
+}

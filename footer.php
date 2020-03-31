@@ -37,7 +37,7 @@
 				})
 				
 				$('.mobile-toggle').on('click', function() {
-					$('.menu-main-container').slideToggle();
+					$('.menu-main-menu-container').slideToggle();
 				})
 			</script>
 		</section><!-- / end site container, begun in the header -->

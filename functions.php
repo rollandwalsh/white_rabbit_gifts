@@ -50,6 +50,15 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
+/*
+* Removes brackets for count after categories name
+*/
+
+function filter_woocommerce_subcategory_count_html( $mark_class_count_category_count_mark, $category ) {
+	$mark_class_count_category_count_mark = ' <mark class="count">' . $category->count . '</mark>';
+	return $mark_class_count_category_count_mark;
+}; 
+
 /*-----------------------------------------------------------------------------------*/
 /* Register main menu for Wordpress use
 /*-----------------------------------------------------------------------------------*/

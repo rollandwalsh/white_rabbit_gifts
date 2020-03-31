@@ -42,7 +42,7 @@
 					background: $pink !important;
 					border-radius: 100%;
 					color: $white;
-					font-size: 1rem;
+					font-size: .75rem;
 					
 					height: 2rem;
 					width: 2rem;
@@ -74,6 +74,8 @@
 		a.button {
 			background: $pink;
 			color: $white;
+			font-size: 16px;
+			line-height: 1.4;
 			text-align: center;
 			text-transform: uppercase;
 			
@@ -137,6 +139,59 @@
 			text-transform: none;
 			
 			padding: ($padding / 2) $padding;
+		}
+	}
+}
+
+.woocommerce,
+.woocommerce-page {
+	.product {
+		display: flex;
+		flex-flow: row wrap;
+		
+		.images {
+			float: none !important;
+			margin-right: .5rem;
+			width: calc(40% - .5rem) !important;
+		}
+		
+		.summary {
+			float: none !important;
+			width: 60% !important;
+		}
+		
+		.product_title {
+			font-family: $main-font;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+		
+		.cart {
+			margin-bottom: $padding;
+			
+			display: flex;
+			justify-content: center;
+			
+			.quantity {
+				margin: 0 !important;
+				
+				input {
+					margin: 0 !important;
+				}
+			}
+			
+			button {
+				background: $pink;
+				color: $white;
+				font-size: 16px;
+				line-height: 1.4;
+				text-align: center;
+				text-transform: uppercase;
+				
+				margin: 0;
+				
+				display: block;
+			}
 		}
 	}
 }
